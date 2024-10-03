@@ -11,6 +11,7 @@ config_version=4
 [application]
 
 config/name="esquirva-dos-bicho"
+run/main_scene="res://Node2D.tscn"
 config/icon="res://icon.png"
 
 [display]
