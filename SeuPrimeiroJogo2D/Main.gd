@@ -9,11 +9,14 @@ func _ready():
 
 # feita a partir do sinal hit do player
 func game_over():
+	$Music.stop()
+	$DeathSound.play()
 	$ScoreTimer.stop()
 	$MobTimer.stop()
 	$HUD.show_game_over()
 	
 func new_game():
+	$Music.play()
 	score = 0
 	get_tree().call_group("mobs", "queue_free")
 	$Player.start($StartPosition.position)
